@@ -1,0 +1,117 @@
+[FROM trainer_bp_mnist_align_91.py]
+C:\Users\bueto\Documents\Dev\NeuralNetPy>python
+Python 3.8.5 (tags/v3.8.5:580fbb0, Jul 20 2020, 15:57:54) [MSC v.1924 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import trainer_bp_mnist as tm; tm.start()
+Loading Training Data...
+Extending Training Data Left...
+Extending Training Data Right...
+Extending Training Data Top...
+Extending Training Data Bottom...
+Extending Training Data Left-Top...
+Extending Training Data Left-Bottom...
+Extending Training Data Right-Top...
+Extending Training Data Right-Bottom...
+Vectorizing labels...
+Creating Network...
+Testing...
+Runtime: 5.20s
+Cost: 1.74
+Accuracy: 7.72%
+Tests Run: 10000
+Correct Results: 772 (avg confidence 7.13%)
+Incorrect Results: 9228 (avg confidence 85.62%)
+Training Starting...
+Epochs: 80
+Training Data Size: 540000
+Mini Batch Size: 100
+Runs per Epoch: 5400
+Learning Rate: 0.100000
+Learning Momentum: 50.00%
+.
+.
+.
+.
+.
+.
+Training Complete
+Testing...
+Runtime: 4.37s
+Cost: 0.13
+Accuracy: 91.18%
+Tests Run: 10000
+Correct Results: 9118 (avg confidence 83.57%)
+Incorrect Results: 882 (avg confidence 5.45%)
+Total Runtime: 12668.10
+>>> tm.network.save("SavedNetworks/dr_net/trained_align_91.json")
+>>> tm.learning_rate
+0.1
+>>> tm.learning_rate = 0.01
+>>> tm.learning_momentum
+0.5
+>>> tm.learning_momentum = 0.8
+>>> tm.epochs
+80
+>>> tm.main()
+Testing...
+Runtime: 4.89s
+Cost: 0.13
+Accuracy: 91.18%
+Tests Run: 10000
+Correct Results: 9118 (avg confidence 83.57%)
+Incorrect Results: 882 (avg confidence 5.45%)
+Training Starting...
+Epochs: 80
+Training Data Size: 540000
+Mini Batch Size: 100
+Runs per Epoch: 5400
+Learning Rate: 0.010000
+Learning Momentum: 80.00%
+.
+.
+.
+.
+.
+.
+Training Complete
+Testing...
+Runtime: 4.68s
+Cost: 0.13
+Accuracy: 91.78%
+Tests Run: 10000
+Correct Results: 9178 (avg confidence 84.08%)
+Incorrect Results: 822 (avg confidence 5.09%)
+>>> tm.epochs
+80
+>>> tm.epochs = 200
+>>> tm.main()
+Testing...
+Runtime: 4.63s
+Cost: 0.13
+Accuracy: 91.78%
+Tests Run: 10000
+Correct Results: 9178 (avg confidence 84.08%)
+Incorrect Results: 822 (avg confidence 5.09%)
+Training Starting...
+Epochs: 200
+Training Data Size: 540000
+Mini Batch Size: 100
+Runs per Epoch: 5400
+Learning Rate: 0.010000
+Learning Momentum: 80.00%
+.
+.
+.
+.
+.
+.
+Training Complete
+Testing...
+Runtime: 4.69s
+Cost: 0.12
+Accuracy: 92.20%
+Tests Run: 10000
+Correct Results: 9220 (avg confidence 84.79%)
+Incorrect Results: 780 (avg confidence 4.87%)
+>>>
+>>> tm.network.save("SavedNetworks/dr_net/training_align_92.json")

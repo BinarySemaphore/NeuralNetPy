@@ -1,0 +1,66 @@
+[FROM trainer_bp_mnist_align_92.txt]
+>>> tm.learning_rate
+0.01
+>>> tm.learning_momentum
+0.8
+>>> tm.epochs
+200
+>>> tm.epochs = 400
+>>> tm.main()
+Testing...
+Runtime: 4.75s
+Cost: 0.12
+Accuracy: 92.20%
+Tests Run: 10000
+Correct Results: 9220 (avg confidence 84.79%)
+Incorrect Results: 780 (avg confidence 4.87%)
+Training Starting...
+Epochs: 400
+Training Data Size: 540000
+Mini Batch Size: 100
+Runs per Epoch: 5400
+Learning Rate: 0.010000
+Learning Momentum: 80.00%
+.
+.
+.
+.
+.
+.
+Training Complete
+Testing...
+Runtime: 4.75s
+Cost: 0.11
+Accuracy: 92.78%
+Tests Run: 10000
+Correct Results: 9278 (avg confidence 85.87%)
+Incorrect Results: 722 (avg confidence 4.54%)
+>>>
+>>> tm.network.save("SavedNetworks/dr_net/trained_align_93.json")
+
+
+
+>>> tm.learning_rate = 0.001
+>>> tm.epochs = 100
+>>> tm.main()
+Testing...
+Runtime: 4.39s
+Cost: 0.11
+Accuracy: 92.78%
+Tests Run: 10000
+Correct Results: 9278 (avg confidence 85.87%)
+Incorrect Results: 722 (avg confidence 4.54%)
+Training Starting...
+Epochs: 100
+Training Data Size: 540000
+Mini Batch Size: 100
+Runs per Epoch: 5400
+Learning Rate: 0.001000
+Learning Momentum: 80.00%
+.
+.
+.
+.
+.
+.
+...?
